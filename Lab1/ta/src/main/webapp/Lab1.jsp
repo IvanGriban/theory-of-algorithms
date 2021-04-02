@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 2 апр. 2021 г., 15:44:10
+    Document   : Lab1
+    Created on : 2 апр. 2021 г., 15:58:13
     Author     : Ivan
 --%>
 
@@ -9,17 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>TA</title>
+        <title>JSP Page</title>
     </head>
     <body>
         <h1>Hello World!</h1>
-        <p>This is paragraph</p>
-        
-        <form action="Lab1.jsp">
-            <a href="Lab1.jsp"></a>
+          <form action="index.jsp">
+            <a href="index.jsp"></a>
                 
-            <input type="submit" value="Lab1">
-        </form>
-        
+            <input type="submit" value="Home">
+          </form>
     </body>
 </html>
