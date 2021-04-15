@@ -14,13 +14,9 @@
     <body>
         <h1>Hello World!</h1>
         
+                
         
-        
-        
-        
-        
-        
-        
+                
         <form action="index.jsp">
         <a href="index.jsp"></a>
 
