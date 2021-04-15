@@ -14,11 +14,17 @@
     <body>
         <h1>Hello World!</h1>
         <p>This is paragraph</p>
-        
+
         <form action="Lab1.jsp">
             <a href="Lab1.jsp"></a>
-                
+
             <input type="submit" value="Lab1">
+        </form>
+        <p></p>
+        <form action="Lab2.jsp">
+            <a href="Lab2.jsp"></a>
+
+            <input type="submit" value="Lab2">
         </form>
         
     </body>
