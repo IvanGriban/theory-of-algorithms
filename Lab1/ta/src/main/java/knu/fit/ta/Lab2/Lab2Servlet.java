@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  *
  * @author Ivan
@@ -20,6 +21,14 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "Lab2Servlet", urlPatterns = {"/Lab2"})
 public class Lab2Servlet extends HttpServlet {
 
+    /*@Autowired
+    Lab2View lab2view;
+    
+    @Override
+    public void init(ServletConfig config) throws ServletException{
+    super.init(config);
+    SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this, config.getServletContext());
+    }*/
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,7 +46,7 @@ public class Lab2Servlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Lab2Servlet</title>");            
+            out.println("<title>Servlet Lab2Servlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Lab2Servlet at " + request.getContextPath() + "</h1>");
@@ -58,8 +67,7 @@ public class Lab2Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        request.getRequestDispatcher("Lab2.jsp").forward(request, response);
+
     }
 
     /**
@@ -73,7 +81,12 @@ public class Lab2Servlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+
+        Lab2View lab2view = new Lab2View();
+
+        String result = lab2view.showResult(request.getParameter("x"));
+        request.setAttribute("result", result);
+        request.getRequestDispatcher("Lab2.jsp").forward(request,response);
     }
 
     /**
